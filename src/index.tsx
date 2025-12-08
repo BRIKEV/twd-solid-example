@@ -3,6 +3,7 @@ import { render } from 'solid-js/web';
 import 'solid-devtools';
 
 import App from './App';
+import './index.css';
 
 if (import.meta.env.DEV) {
   const { initTWD } = await import('twd-js/bundled');
