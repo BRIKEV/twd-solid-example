@@ -14,7 +14,7 @@
   "devDependencies": {
     "@types/node": "^25.0.3",
     "solid-devtools": "^0.34.4",
-    "twd-js": "^1.4.0",
+    "twd-js": "^1.4.1",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
     "vite-plugin-solid": "^2.11.10"
