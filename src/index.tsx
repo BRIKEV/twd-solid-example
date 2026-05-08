@@ -5,15 +5,6 @@ import 'solid-devtools';
 import App from './App';
 import './index.css';
 
-if (import.meta.env.DEV) {
-  const { initTWD } = await import('twd-js/bundled');
-  const tests = import.meta.glob("./**/*.twd.test.ts")
-  initTWD(tests);
-  const { createBrowserClient } = await import('twd-relay/browser');
-  const client = createBrowserClient();
-  client.connect();
-}
-
 const root = document.getElementById('root');
 
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
