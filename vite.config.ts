@@ -4,6 +4,7 @@ import solidPlugin from 'vite-plugin-solid';
 import devtools from 'solid-devtools/vite';
 import { twdRemote } from 'twd-relay/vite';
 import { twd } from 'twd-js/vite-plugin';
+import istanbul from 'vite-plugin-istanbul';
 
 export default defineConfig({
   plugins: [
@@ -14,6 +15,12 @@ export default defineConfig({
       testFilePattern: '/**/*.twd.test.ts',
     }),
     twdRemote() as PluginOption,
+    istanbul({
+      include: 'src/**/*',
+      exclude: ['node_modules', '**/*.twd.test.ts', 'src/twd-tests/**'],
+      requireEnv: !process.env.CI,
+      extension: ['.ts', '.tsx'],
+    }),
   ],
   server: {
     port: 3000,

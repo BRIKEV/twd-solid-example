@@ -26,3 +26,8 @@ gitignore
 # System Files
 .DS_Store
 Thumbs.db
+
+# TWD
+.twd/
+.nyc_output
+coverage
