@@ -20,6 +20,7 @@ export default defineConfig({
       exclude: ['node_modules', '**/*.twd.test.ts', 'src/twd-tests/**'],
       requireEnv: !process.env.CI,
       extension: ['.ts', '.tsx'],
+      checkProd: false,
     }),
   ],
   server: {
